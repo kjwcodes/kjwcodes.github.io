@@ -1,30 +1,39 @@
 $(document).ready(function () {
   let currentIndex = 0; // 현재 섹션 인덱스
   const scroll = document.getElementById("scroll");
+  let isScrolling = false; // 스크롤 중복 방지
 
   window.addEventListener(
     "wheel",
     function (event) {
+      if (isScrolling) return; // 현재 스크롤 중이면 실행 방지
+
+      isScrolling = true; // 스크롤 시작
       if (event.deltaY > 0) {
-        // 아래로 스크롤
         if (currentIndex < 4) {
           currentIndex++;
         }
       } else {
-        // 위로 스크롤
         if (currentIndex > 0) {
           currentIndex--;
         }
       }
+
       // 섹션 이동
       scroll.style.transform = `translateX(${currentIndex * -100}vw)`;
+      scroll.style.transition = "transform 0.6s ease-in-out"; 
 
       // 기본 스크롤 방지
       event.preventDefault();
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 600);
     },
-    { passive: false } // passive 옵션 설정
+    { passive: false } // 기본 스크롤 동작을 방지하기 위한 옵션
   );
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
