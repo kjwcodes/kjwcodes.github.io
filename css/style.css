@@ -1,0 +1,1080 @@
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SBAggroL';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 페이지 전체 설정 */
+html, body {
+  font-family: 'SBAggroB', 'Arial', sans-serif;
+  color: #b8a995;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #2d2d2f;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  z-index: 100;
+} 
+
+.page {            
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 1페이지 스타일 */
+
+.cover-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 20%;
+  width: 30%; 
+  height: 100%;
+  background-image: url(../images/cover-background-image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.center1-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 20vh;
+  line-height: 20vh;
+  background-image: url(../images/portfolio-box-image.png), url(../images/portfolio-background-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.center1-box > h1 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+#side1-box {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#side1-box > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.25;
+  z-index: 0;
+  animation: rotate 30s linear infinite;
+}
+
+#side1-box > ul > li {
+  font-size: 1vw;
+  text-align: center;
+  font-family: 'SBAggroL', 'Arial', sans-serif;
+  margin-bottom: 1vh;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== 2페이지 스타일 ===== */
+#page2 {
+  display: flex;
+  padding: 2vw;
+  box-sizing: border-box;
+}
+
+#left2-box, #right2-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  position: relative;
+}
+
+
+#left2-box > img {
+  width: 100%; 
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#left2-box > h2 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  letter-spacing: 0.2vw;
+  text-align: center;
+  z-index: 1;
+}
+
+#right2-box {
+  gap: 1vw;
+  height: 100%;
+}
+
+#right2-box > div {
+  display: flex; 
+  gap: 1vw;
+  transition: all 1s ease;
+  position: relative;
+  right: -150%;
+}
+
+#right2-box > div > h2 {
+  flex: 0 0 30%;
+  font-size: 2vw;
+}
+
+#right2-box > div > ul {
+  display: flex;
+  flex-direction: column; 
+  font-family: 'SBAggroL', 'Arial', sans-serif;
+}
+
+#right2-box > div > ul > li {
+  font-size: 1vw;
+  line-height: 1.5;
+}
+
+#skill > div > h3 {
+  font-size: 1.5vw;
+  margin: 1vw 0;
+}
+
+#skill > div > ul > li {
+  display: flex;
+  align-items: center; 
+  gap: 1.5vw; 
+  margin-bottom: 1vh;
+}
+
+#skill > div > h3 {
+  margin-top: 0;
+}
+
+#skill > div > ul > li > img {
+  height: auto;
+  max-height: 5vw; 
+}
+
+#skill > div > ul > li > img:first-child {
+  width: 2vw; 
+}
+
+#skill > div > ul > li > img:last-child {
+  width: 10vw;
+}
+
+
+/* ===== 3페이지 스타일 ===== */
+#page3 {
+  display: flex;
+  gap: 5vw;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+}
+
+#page3-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  margin-right: 15vw;
+}
+
+#hobby {
+  position: relative;
+}
+
+#page3-left h2 {
+  font-size: 2vw;
+}
+
+#hobby::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background-image: url(../images/hobby.png);
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+
+#hobby > ul {
+  display: flex;
+  margin: 5vh 0 0; 
+}
+
+#hobby > ul > li {
+  margin-top: 25%;
+  font-size: 1vw;
+  padding: 1vw;
+  flex: 0 1 20%;
+  font-family: 'SBAggroL', 'Arial', sans-serif;
+}
+
+
+#sing {
+transform: translateX(-1vw);
+}
+
+#sports {
+transform: translateX(-1vw);
+}
+
+#movie {
+transform: translateX(1vw);  
+}
+
+#mbti {
+  display: flex;
+  flex-direction: column; 
+  gap: 1.5vw;
+}
+
+#mbti > div {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+#mbti > div > div { 
+  height: 5vh;
+  flex: 1; 
+  background-color: #b8a995; 
+  border-radius: 0.5vw;
+}
+
+#mbti > div > div > div {
+  height: 100%;
+  background-color: #68ffd6;
+  border-radius: 0.5vw 0 0 0.5vw;
+  width: calc(100% * var(--progress));
+}
+
+#mbti > div > p {
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  font-size: 1vw;
+}
+
+#mbti > div > p > span {
+  font-size: 1vw;
+}
+
+#mbti > p {
+  font-size: 1vw;
+  margin-top: -1vh; 
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+}
+
+#profile2 {
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 4 페이지 */
+#split-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/split-background-image.png);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#split-left {
+  flex: 1;
+  max-width: 40%;
+  transform: translateX(10vw) translateY(-10vh);
+  background-image: url(../images/split-left-line.png);
+  background-size: 50% 0.3vh; 
+  background-repeat: no-repeat; 
+  background-position: right;
+}
+
+#split-right {
+  flex: 1;
+  max-width: 35%;
+  color: #2b2b2b; 
+  transform: translateX(-10vw) translateY(10vh);
+  background-image: url(../images/split-right-line.png);
+  background-size: 50% 0.3vh; 
+  background-repeat: no-repeat; 
+  background-position: left;
+  text-align: right;
+}
+
+#split-left > a, #split-right > a {
+  font-size: 3vw;
+  margin: 0;
+  text-decoration: none;
+}
+
+#split-left > a {
+  margin-right: 2vw; 
+  color: #b8a995;
+}
+
+#split-right > a {
+  margin-left: 2vw; 
+  color: #2b2b2b;
+}
+
+/* 마지막페이지 */
+.center1-box2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/portfolio-background-image.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.center1-box2 > p {
+  font-size: 2vw;
+  color: #b8a995;
+  text-align: right;
+  letter-spacing: 0.5vw;
+  margin-top: 1vh;
+}
+
+.center1-box2 > p > span {
+  margin-right: 10vw;
+  font-size: 3.5vw;
+  color:#8f7f72;
+  letter-spacing: 0;
+}
+
+/* 501 1페이지 */
+.split-left-page {
+  width: 100vw;
+  height: 500vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.page2 {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 5vh 2vw;
+}
+
+#closet1-top {
+  text-align: center; 
+  margin-bottom: 15vh; 
+}
+
+#closet1-top > h2 {
+  font-size: 4vw;
+  margin-bottom: 5vh;
+}
+
+#closet1-top > p {
+  font-size: 1vw;
+  line-height: 2;
+  margin: 3vh 0;
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+}
+
+#closet1-top > p > span{
+  font-weight: bolder;
+}
+
+#closet1-bot {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  background-image: url(../images/overview-line.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+}
+
+#closet1-bot li {
+  background-color: #b8a995;
+  color: #2d2d2f;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+#closet1-bot span {
+  display: block;
+  font-size: 1vw;
+  color: #2d2d2f;
+}
+
+/* 501 2페이지 */
+#closet2-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+}
+
+#closet2-top > h2 {
+  font-size: 4vw;
+  margin-right: 3vw;
+}
+
+#closet2-top > ul {
+  display: flex;
+  justify-content: center;
+}
+
+#closet2-top > ul > li {
+  position: relative;
+  border-left: 8vw solid transparent;
+  border-right: 8vw solid transparent;
+}
+
+#closet2-top > ul> li:nth-child(1) {
+  border-bottom: 15vw solid #FFFFFF;
+}
+
+#closet2-top > ul > li:nth-child(2) {
+  border-top: 15vw solid #828282;
+  transform: translateX(-8vw);
+}
+
+#closet2-top > ul > li:nth-child(3) {
+  border-bottom: 15vw solid #AEE1E1;
+  transform: translateX(-16vw);
+}
+
+#closet2-top > ul > li:nth-child(4) {
+  border-top: 15vw solid #F1C6C0;  
+  transform: translateX(-24vw);
+}
+
+/* 
+#closet2-tri-text1 {
+  border-bottom: 15vw solid #FFFFFF;
+}
+
+#closet2-tri-text2 {
+  border-top: 15vw solid #828282;
+  transform: translateX(-8vw);
+}
+
+#closet2-tri-text3 {
+  border-bottom: 15vw solid #AEE1E1;
+  transform: translateX(-16vw);
+}
+
+#closet2-tri-text4 {
+  border-top: 15vw solid #F1C6C0;  
+  transform: translateX(-24vw);
+} 
+*/
+
+.tri-text1 span, .tri-text2 span{
+  position: absolute;
+  transform: translateX(-50%) translateY(50%);
+  font-size: 1vw;
+  font-family: 'SBAgrroL', sans-serif;
+}
+
+.tri-text1 span {
+  transform: translateX(-50%) translateY(1300%);
+}
+
+.tri-text2 span {
+  transform: translateX(-50%) translateY(-1400%);
+}
+
+
+#closet2-bot {
+  display: flex;
+  align-items: center; 
+  gap: 15vh;
+}
+
+#closet2-bot > h2 {
+  font-size: 4vw;
+  margin-left: -10vw;
+}
+
+#closet2-bot > ul {
+  display: flex;
+  align-items: center;
+}
+
+#closet2-bot > ul > li {
+  background-color: #b8a995;
+  color: #2d2d2f;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  margin-right: 10vw;
+}
+
+#closet2-bot > ul > li > span {
+  font-size: 1vw;
+}
+
+/* 501 3페이지 */
+#closet-main {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 0;
+}
+
+#closet-main > h2 {
+  font-size: 4vw;
+  margin-bottom: 10vh;
+  text-align: left;
+}
+
+#closet-main > div {
+  display: flex;
+  position: relative;
+}
+
+#closet-main > div > a > img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+#closet-main > div > div {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.closet-explain {
+  position: absolute;
+  display: flex;
+  align-items: center; 
+  margin-left: -2vw;
+}
+
+
+.explain::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  width: 2vw;
+  height: 2vw;
+  background-color: #b092b3;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.explain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  padding-left: 6vw;
+}
+
+.explain > h3 {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.explain > p {
+  font-size: 1vw;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+#closet-banner {
+  top: 15%;
+}
+
+#closet-intro {
+  top: 40%;
+}
+
+#closet-event {
+  top: 66%;
+}
+
+#closet-review {
+  top: 83%;
+}
+
+#closet-footer {
+  top: 94%;
+}
+
+
+/* closet 4 페이지 */
+.closet-sub-page {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 20vh 0;
+}
+
+.closet-sub-page > h2 {
+  font-size: 4vw;
+  margin-top: 5vh;
+}
+
+#closet-sub-cen {
+  display: flex;
+  margin-top: 10vh;
+}
+
+#explain2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  width: 2vw;
+  height: 2vw;
+  background-color: #b092b3;
+  border-radius: 50%;
+}
+
+#explain2 {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  margin-right: -2vw;
+}
+
+#explain2 > h3 {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+#explain2 > p {
+  font-size: 1vw;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+#closet-sub-image {
+  flex: 0 0 auto;
+  max-width: 600px;
+  height: auto;
+}
+
+.back-btn {
+  position: absolute; 
+  left: 50%; 
+  bottom: 5%; 
+  transform: translateX(-50%); 
+  font-size: 1vw; 
+  background-color: #d09137; 
+  color: white; 
+  width: 140px;
+  height: 30px;
+  border: none; 
+  border-radius: 5px; 
+}
+
+.back-btn:hover {
+  background-color: #b57a2e; 
+}
+
+/* 유영제약 1 페이지 */
+.split-right-page {
+  width: 100vw;
+  height: 550vh;
+  background-color: #b8a995;
+  color: #2d2d2f;
+  align-items: center;
+  justify-content: center;
+}
+
+.page3 {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 5vh 2vw;
+}
+
+#youyoung1-top {
+  text-align: center; 
+  margin-bottom: 15vh; 
+}
+
+#youyoung1-top > h2 {
+  font-size: 4vw;
+  margin-bottom: 5vh;
+}
+
+#youyoung1-top > p {
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  font-size: 1vw;
+  line-height: 2;
+  margin: 3vh 0;
+}
+
+#youyoung1-top > p > span{
+  font-weight: bolder;
+}
+
+#youyoung1-bot {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  width: 80%;
+  text-align: center;
+  margin-top: 20px; 
+  background-image: url(../images/youyoung-overview.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+}
+
+#youyoung1-bot > li {
+  background-color: #2d2d2f;
+  color: #b8a995;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+#youyoung1-bot > li > span {
+  display: block;
+  font-size: 1vw;
+  color: #b8a995;
+}
+
+/* 유영제약 2페이지 */
+#youyoung2-top {
+  margin-bottom: 10vh;
+  margin-left: 10vw; 
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+}
+
+#youyoung2-top > h2 {
+  font-size: 4vw;
+}
+
+#youyoung2-top > ul {
+  display: flex;
+  align-items: center;
+}
+
+#youyoung2-top > ul > li {
+  position: relative;
+  border-left: 8vw solid transparent;
+  border-right: 8vw solid transparent;
+}
+
+#youyoung2-top > ul> li:nth-child(1) {
+  border-bottom: 15vw solid #EBEBEB;
+}
+
+#youyoung2-top > ul > li:nth-child(2) {
+  border-top: 15vw solid #000000;
+  transform: translateX(-8vw);
+  color: #b8a995;
+}
+
+#youyoung2-top > ul > li:nth-child(3) {
+  border-bottom: 15vw solid #228B22;
+  transform: translateX(-16vw);
+}
+
+#youyoung2-top > ul > li:nth-child(4) {
+  border-top: 15vw solid #F08518;  
+  transform: translateX(-24vw);
+}
+
+/* 
+#youyoung2-tri-text1 {
+  border-bottom: 15vw solid #EBEBEB;
+}
+
+#youyoung2-tri-text2 {
+  border-top: 15vw solid #000000;
+  transform: translateX(-8vw);
+  color: #b8a995;
+}
+
+#youyoung2-tri-text3 {
+  border-bottom: 15vw solid #228B22;
+  transform: translateX(-16vw);
+}
+
+#youyoung2-tri-text4 {
+  border-top: 15vw solid #F08518;  
+  transform: translateX(-24vw);
+} 
+*/
+
+#youyoung2-bot {
+  display: flex;
+  align-items: center; 
+  gap: 15vh;
+}
+
+#youyoung2-bot > h2 {
+  font-size: 4vw;
+  margin-left: -10vw;
+}
+
+#youyoung2-bot > ul {
+  display: flex;
+
+}
+
+#youyoung2-bot > ul > li {
+  background-color: #2d2d2f;
+  color: #b8a995;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  margin-right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  font-family: 'SBAggroL', 'Arial', sans-serif;
+}
+
+#youyoung2-bot > ul > li > span {
+  font-size: 1vw;
+  text-align: center;
+}
+
+
+/* 유영제약 3페이지 */
+.page4 {
+  width: 100vw; 
+  height: 100vh;
+  padding-top: 25vh;
+  margin: 0 auto;
+  overflow: hidden; 
+  color: #2d2d2f;
+  background-color: #b8a995;
+}
+
+.page4 > h2{
+  font-size: 4vw;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+.image-wrapper {
+  display: flex;
+  margin-bottom: 3vh;
+}
+
+.image-wrapper > li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15vw;
+  font-size: 1vw; 
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  
+}
+
+.image-wrapper > li > img {
+  width: 300px;
+  height: auto;
+  margin-top: 1vh;
+}
+/* 
+.image-wrapper > li > span {
+  font-size: 1vw; 
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  margin-bottom: 1vh;
+} */
+
+.image-wrapper > li:first-child {
+  margin-left: 3vw;
+}
+
+/* 유영제약 4페이지 */
+#youyoung-main {
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 5vh 0;
+  background-color: #b8a995;
+  color: #2d2d2f;
+}
+
+#youyoung-main > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 5vw;
+  padding: 2vw;
+}
+
+#youyoung-main > div > div {
+  text-align: right;
+}
+
+#youyoung-main > div > div > h2 {
+  font-size: 4vw;
+  margin-bottom: 5vh;
+}
+
+#youyoung-main > div > div > p{
+  font-size: 1vw;
+  line-height: 1.3;
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  word-break: keep-all;
+}
+
+#youyoung-main > div > a > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 유영제약 5 페이지 */
+#youyoung-sub {
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 5vh 0;
+  background-color: #b8a995;
+  color: #2d2d2f;
+}
+
+#youyoung-sub > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 5vw;
+  padding: 2vw;
+}
+
+#youyoung-sub > div > div > h2 {
+  font-size: 4vw;
+  margin-bottom: 5vh;
+}
+
+#youyoung-sub > div > div > p{
+  font-size: 1vw;
+  line-height: 1.3;
+  font-family: 'SBAgrroL', 'Arial', sans-serif;
+  word-break: keep-all;
+}
+
+#youyoung-sub > div > a > img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+#top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+  text-decoration: none;
+  z-index: 10;
+}

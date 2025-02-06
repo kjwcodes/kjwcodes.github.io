@@ -1,0 +1,349 @@
+@font-face {
+  font-family: 'DAEHWA_NANUM_B';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/DAEHWA_NANUM_B.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DAEHWA_NANUM_L';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/DAEHWA_NANUM_L.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KimjungchulMyungjo-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GongGothicMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GongGothicLight';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #ebebeb;
+  font-family: 'GongGothicLight', 'Arial', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+#scroll {
+  display: flex;
+  width: 400%;
+  transition: transform 1s ease;
+}
+
+#scroll > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+/* header */
+#header {
+  height: 12vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1vh;
+}
+
+#header > ul {
+  display: flex;
+  gap: 2vw;
+}
+
+#header > ul > li > a {
+  color: #228b22;
+  text-decoration: none;
+  font-family: 'KimjungchulMyungjo-Regular', 'Arial', sans-serif;
+  font-size: 1.5vw;
+}
+
+/* page1 */
+#page1 {
+  width: 100vw;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5vh;
+  flex-direction: column;
+  padding-left: 10vw;
+  position: relative;
+}
+
+#page1 > h2 {
+  font-size: 6vw;
+  font-family: 'DAEHWA_NANUM_B', 'Arial', sans-serif;
+  line-height: 1.2;
+}
+
+#page1 > p {
+  font-size: 2.5vw;
+  font-family: 'DAEHWA_NANUM_L', 'Arial', sans-serif;
+  line-height: 1.2;
+}
+
+#page1::before {
+  content: '';
+  position: absolute;
+  width: 20vw;
+  height: 60vh;
+  top: 15vh;
+  right: 15vw;
+  background-image: url(../images/translateImage.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: move 3s infinite ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5vw, 5vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+
+/* 2page */
+#page2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#page2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.1;
+  background-image: url(../images/opacity8.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  z-index: 0;
+}
+
+#page2 > h2 {
+  width: 40vw;
+  font-size: 7vw;
+  font-family: 'GongGothicMedium', 'Arial', sans-serif;
+  color: #228b22;
+  font-weight: bold;
+}
+
+#page2 > div {
+  width: 40vw;
+}
+
+#page2 > div > h3 {
+  font-size: 3vw;
+  color: #228b22;
+  font-family: 'GongGothicMedium', 'Arial', sans-serif;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+#page2 > div > p {
+  font-size: 1.5vw;
+  font-family: 'GongGothicLight', 'Arial', sans-serif;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+#page2 > div > ul {
+  margin-top: 2vh;
+}
+
+#page2 > div > ul > li {
+  list-style: circle;
+  margin: 1vh 0 1vh 2vw;
+}
+
+#page2 > div > ul:nth-child(8) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열로 배치 */
+}
+
+
+/* 3 page */
+#page3 {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+
+#page3 > div > h2 {
+  font-size: 6vw;
+  font-family: 'GongGothicMedium', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #228b22;
+}
+
+#page3 > div > a {
+  display: block;
+  width: 100%;
+  font-family: 'GongGothicMedium', 'Arial', sans-serif;
+  text-align: right;
+  color: #228b22;
+  text-underline-offset: 5px;
+  margin-top: 2vh;
+  font-size: 1.5vw;
+}
+
+#image-slide {
+  width: 20vw;
+  overflow: hidden;
+  position: relative;
+}
+
+#image-slide > ul {
+  display: flex;
+}
+
+#image-slide > ul > li > a > img {
+  /* display: block; 
+  width: 60vw;*/
+  width: 20vw;
+}
+
+
+/* 4page */
+#page4 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#page4 > div {
+  width: 90vw;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#page4 > div > div {
+  display: flex;
+  gap: 4vw;
+  margin-bottom: 5%;
+  margin-left: 10vw;
+}
+
+#page4 > div > div > h2 {
+  font-size: 6vw;
+  font-family: 'GongGothicMedium', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #228b22;
+}
+
+#page4 > div > div > a {
+    font-size: 1.5vw;
+    font-family: 'GongGothicLight', 'Arial', sans-serif;
+    color: #228b22;
+    text-decoration: none;
+    align-items: flex-end;
+    display: flex;
+}
+
+#page4 > div > ul {
+  width: 100%;
+}
+
+#page4 > div > ul > li {
+  width: 70%;
+  text-align: right;
+  margin-bottom: 3vh;
+}
+
+#page4 > div > ul > li > a {
+  color: black;
+  font-size: 1.5vw;
+  font-family: 'GongGothicLight', 'Arial', sans-serif;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+#page4 > footer {
+  width: 100vw;
+  height: 12vh;
+  background-color: #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page4 > footer > ul {
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+#page4 > footer > ul > li::before {
+  content: "";
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  bottom: -90%;
+  left: -50%;
+  background-image: url(../images/footerLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#page4 > footer > ul::after {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  bottom: 5%;
+  right: -30%;
+  background-image: url(../images/footerImage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+#page4 > footer > ul > li {
+  font-family: 'GongGothicLight', 'Arial', sans-serif;
+  font-size: 1vw;
+  margin-bottom: 1vh;
+}
