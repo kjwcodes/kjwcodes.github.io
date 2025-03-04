@@ -339,7 +339,7 @@ transform: translateX(0.2vw);
   background-image: url(../images/split-left-line.png);
   background-size: 50% 0.3vh; 
   background-repeat: no-repeat; 
-  background-position: right;
+  background-position: right 0px top 20px;
 }
 
 #split-right {
@@ -350,8 +350,9 @@ transform: translateX(0.2vw);
   background-image: url(../images/split-right-line.png);
   background-size: 50% 0.3vh; 
   background-repeat: no-repeat; 
-  background-position: left;
+  background-position: left 0px bottom 20px;
   text-align: right;
+  position: relative;
 }
 
 #split-left > a, #split-right > a {
@@ -363,11 +364,76 @@ transform: translateX(0.2vw);
 #split-left > a {
   margin-right: 2vw; 
   color: #b8a995;
+  transform: translateY(5vh);
+  position: relative;
+}
+
+#split-left > a::after {
+  content: "클릭해주세요";
+  position: absolute;
+  bottom: 110%; /* 요소 위쪽에 배치 */
+  left: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #b8a995;
+  color: #2b2b2b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#split-left > a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+#split-left > ul {
+  font-size: 1vw;
+  margin-top: 50px;
+  margin-right: 2vw; 
+  color: #b8a995;
+  line-height: 1.8;
+  opacity: 0.5;
 }
 
 #split-right > a {
   margin-left: 2vw; 
   color: #2b2b2b;
+  position: relative;
+}
+
+#split-right > a::after {
+  content: "클릭해주세요";
+  position: absolute;
+  top: 110%; /* 요소 위쪽에 배치 */
+  right: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #2b2b2b;
+  color: #b8a995;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#split-right > a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+#split-right > ul {
+  font-size: 1vw;
+  margin-bottom: 50px;
+  margin-left: 2vw; 
+  color: #2b2b2b;
+  line-height: 1.8;
+  opacity: 0.5;
 }
 
 /* 마지막페이지 */
@@ -616,6 +682,32 @@ transform: translateX(0.2vw);
   height: auto;
 }
 
+#closet-main > div > a {
+  position: relative;
+}
+
+#closet-main > div > a::after {
+  content: "클릭해주세요";
+  position: absolute;
+  bottom: 101%; /* 요소 위쪽에 배치 */
+  right: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #b8a995;
+  color: #2b2b2b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#closet-main > div > a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 #closet-main > div > div {
   position: relative;
   width: 40%;
@@ -702,6 +794,7 @@ transform: translateX(0.2vw);
 #closet-sub-cen {
   display: flex;
   margin-top: 10vh;
+  position: relative;
 }
 
 #explain2::after {
@@ -740,6 +833,32 @@ transform: translateX(0.2vw);
   word-break: keep-all;
   text-align: right;
   margin-right: 7vw;
+}
+
+#closet-sub-cen > a {
+  position: relative;
+}
+
+#closet-sub-cen > a::after {
+  content: "클릭해주세요";
+  position: absolute;
+  bottom: 102%; /* 요소 위쪽에 배치 */
+  left: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #b8a995;
+  color: #2b2b2b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#closet-sub-cen > a:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 #closet-sub-image {
@@ -1026,10 +1145,36 @@ transform: translateX(0.2vw);
   word-break: keep-all;
 }
 
+#youyoung-main > div > a {
+  position: relative;
+}
+
 #youyoung-main > div > a > img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+#youyoung-main > div > a::after {
+  content: "클릭해주세요";
+  position: absolute;
+  bottom: 101%; /* 요소 위쪽에 배치 */
+  left: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #2b2b2b;
+  color: #b8a995;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#youyoung-main > div > a:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* 유영제약 5 페이지 */
@@ -1064,8 +1209,37 @@ transform: translateX(0.2vw);
   word-break: keep-all;
 }
 
+#youyoung-sub > div > a {
+  width: 500px;
+  height: auto;
+  position: relative;
+}
+
+#youyoung-sub > div > a::after {
+  content: "클릭해주세요";
+  position: absolute;
+  bottom: 101%; /* 요소 위쪽에 배치 */
+  right: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #2b2b2b;
+  color: #b8a995;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#youyoung-sub > div > a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 #youyoung-sub > div > a > img {
-  width: 80%;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
